@@ -1,0 +1,15 @@
+<app-divider>Model Component</app-divider>
+
+<button (click)="onClick()">Open</button>
+
+<app-model (close)="onClick()" *ngIf="modalOpen">
+    <p>Lorem ipsum dolor sit amet.</p>
+    <div modalTitle>Reusable</div>
+    <div modalFooter>
+        <button class="ui button" (click)="onClick()">Close</button>
+    </div>
+</app-model>
+
+<app-divider>Accordion</app-divider>
+
+<app-accordion [items]="items"></app-accordion>
